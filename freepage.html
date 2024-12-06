@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inspirational Journey</title>
+        <link rel="icon" type="image/x-icon" href="all_images/favicon2.jpg">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  fontFamily: {
+                      'poppins': ['Poppins', 'sans-serif']
+                  }
+              }
+          }
+      }
+      </script>
+    </head>
+
+    <body class="min-h-screen font-poppins bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
+
+        <!-- 1. header -->
+       <!-- 1. header -->
+<header
+class="fixed top-0 left-0 right-0 flex justify-between items-center px-4 md:px-8 bg-white py-4 h-16 z-50"
+>
+<!-- Logo -->
+<div class="text-2xl font-serif font-extrabold tracking-widest">
+  VOLVO
+</div>
+
+<!-- Navigasi Desktop -->
+<nav class="hidden md:block">
+  <ul
+    class="flex gap-8 justify-center items-center text-lg font-semibold"
+  >
+    <li>
+      <a
+        href="index.html"
+        class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="biodata.html"
+        class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+        >Biodata</a
+      >
+    </li>
+    <li>
+      <a
+        href="contact_us.html"
+        class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+        >Contact Us</a
+      >
+    </li>
+    <li>
+      <a
+        href="posts.html"
+        class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+        >Posts</a
+      >
+    </li>
+    <li>
+      <a
+        href="freepage.html"
+        class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+        >Free Content</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<!-- Tombol Masuk -->
+<div
+  class="hidden md:flex items-center opacity-70 transition-all hover:bg-gray-100 rounded p-3"
+>
+  <i class="fas fa-user mr-2 text-lg"></i>
+  <span class="font-light">Masuk</span>
+</div>
+
+<!-- Tombol Mobile Menu -->
+<div class="md:hidden">
+  <button id="mobile-menu-toggle" class="focus:outline-none">
+    <i class="fas fa-bars text-2xl"></i>
+  </button>
+</div>
+
+<!-- Mobile Menu (Overlay) -->
+<div
+  id="mobile-menu"
+  class="fixed top-0 left-0 w-full h-full bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-50"
+>
+  <div class="flex justify-between items-center p-4">
+    <div class="text-2xl font-serif font-extrabold tracking-widest">
+      VOLVO
+    </div>
+    <button id="mobile-menu-close" class="focus:outline-none">
+      <i class="fas fa-times text-2xl"></i>
+    </button>
+  </div>
+
+  <nav class="mt-10">
+    <ul
+      class="flex flex-col items-center text-lg font-semibold space-y-6"
+    >
+      <li>
+        <a
+          href="index.html"
+          class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="biodata.html"
+          class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+          >Biodata</a
+        >
+      </li>
+      <li>
+        <a
+          href="contact_us.html"
+          class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+          >Contact Us</a
+        >
+      </li>
+      <li>
+        <a
+          href="posts.html"
+          class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+          >Posts</a
+        >
+      </li>
+      <li>
+        <a
+          href="freepage.html"
+          class="text-black px-4 py-2 hover:bg-gray-100 rounded"
+          >Free Content</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div class="absolute bottom-10 w-full flex justify-center">
+    <div
+      class="flex items-center opacity-70 transition-all hover:bg-gray-100 rounded p-3"
+    >
+      <i class="fas fa-user mr-2 text-lg"></i>
+      <span class="font-light">Masuk</span>
+    </div>
+  </div>
+</div>
+</header>
+
+<!-- Script untuk Mobile Menu -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileMenuClose = document.getElementById("mobile-menu-close");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuToggle.addEventListener("click", function () {
+    mobileMenu.classList.remove("-translate-x-full");
+  });
+
+  mobileMenuClose.addEventListener("click", function () {
+    mobileMenu.classList.add("-translate-x-full");
+  });
+});
+</script>
+
+    <main class="container mx-auto px-4 pt-24 space-y-8">
+      <!-- Hero Section -->
+      <section class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-[#6a11cb] to-[#2575fc] bg-clip-text text-transparent">
+            You Are Enough
+          </h1>
+          <p class="text-gray-600 leading-relaxed">
+            A personal journey of self-discovery, resilience, and acceptance.
+          </p>
+        </div>
+        <img
+          src="all_images/quotes.jpg"
+          class="rounded-xl shadow-lg"
+          alt="Inspirational Image"
+        />
+      </section>
+
+      <section class="bg-white/70 backdrop-blur-md rounded-xl p-8 transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2.5">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl text-center mb-6 bg-gradient-to-tr from-[#6a11cb] to-[#2575fc] bg-clip-text text-transparent">
+            My Personal Story
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            <p class="text-[#4D5656] leading-[1.6] text-justify px-[15px]">
+              Dalam perjalanan hidup ku, sering sekali aku merasa terjebak dalam perasaan
+              tidak cukup terhadap diri sendiri. Apalagi pada saat aku menjalani ujian 
+              MID di semester pertama ku, ayah ku yang sangat ku cintai, belahan jiwaku 
+              pergi meninggalkan ku, hati ku sungguh dipenuhi dengan rasa sakit, hampa, 
+              kecewa dan aku pun mulai bertanya-tanya pada diriku sendiri. "Apakah aku 
+              telah melakukan hal-hal yang cukup untuk membuatnya bangga? Apakah aku 
+              cukup baik untuk membuat dia tenang pada saat kepergiannya?". Akupun mulai 
+              merasa tidak cukup melakukannya, aku menyalahkan diriku untuk semua hal. 
+              Sungguh itu adalah hal yang paling menyakitkan yang terjadi dihidupku 
+              rasanya seperti mimpi. 
+
+              Rasa kehilangan seorang ayah menjadi beban yang berat yang kualami dihari-
+              hari yang kujalani, kepergiannya membuat ku merasa bahwa aku telah gagal 
+              menjadi anaknya. Apalagi karena aku tidak dapat pulang untuk melihatnya dan 
+              mengantarnya ke tempat peristirahatan terakhirnya. Semua hal itu 
+              membelenggu dipikiranku sangat mengganggu ku, rasanya kepala ku ingin pecah 
+              pada saat itu. Karna sungguh pikiran ku tidak dapat ku kuasai aku selalu 
+              menyalahkan diriku, aku tidak merasa cukup membanggakan dan menyenangkan ayahku.
+              Namun, di tengah segala kesedihan, keterpurukan dan keraguan, ada sebuah
+              kebenaran yang tidak bisa kuabaikan: "kamu sudah cukup". "Nilai dirimu  
+              tidak ditentukan oleh pengakuan orang lain, bahkan oleh ayahmu sendiri."
+              Lalu aku juga membaca ayat alkitab: 
+
+          <blockquote class="italic my-[20px] p-[10px] border-l-4 border-[#4A90E2] text-[#4A90E2]">              Kejadian 1:31
+              "Maka Allah melihat segala yang dijadikan-Nya itu, dan sesungguhnya, sangat 
+              baiklah semuanya itu."
+          </blockquote>
+
+          <span class="text-[#4D5656] leading-[1.6] text-justify px-[15px]">
+              Sebenarnya masih banyak lagi kata-kata ataupun firman Tuhan yang 
+              kudengarkan pada saat itu, yang mengubah diriku dari keterpurukan menjadi 
+              lebih baik dari sebelumnya. Aku menyadari, aku menerima dan mengikhlaskan semuanya. Aku cukup untuk ayahku.
+          </span>
+
+          <blockquote class="italic my-[20px] p-[10px] border-l-4 border-[#4A90E2] text-[#4A90E2]">              Brené Brown, seorang penulis dan pembicara motivasi, mengajarkan aku untuk 
+              mengingat bahwa penerimaan diri adalah langkah pertama menuju penyembuhan. 
+              Tidak peduli seberapa dalam rasa sakit yang kamu rasakan, kamu memiliki 
+              keunikan dan kekuatan yang tak tergantikan. Dalam setiap detik hidupmu, 
+              kamu layak untuk dicintai dan dihargai—hanya karena siapa kamu, bukan 
+              karena apa yang telah kamu lakukan atau tidak lakukan.
+          </blockquote>
+
+          <span class="text-[#4D5656] leading-[1.6] text-justify px-[15px]">
+              Saat keraguan dan kesedihan muncul kembali, aku kemudian mengingat bahwa 
+              aku adalah harapan yang berharga. Meski ada kekosongan yang ditinggalkan, 
+              cinta dan juga kenangan tentang ayahku dapat menjadi pengingat bahwa aku 
+              telah berusaha sebaik mungkin dengan apa yang aku bisa dan miliki. 
+
+              Jadi sobat, terimalah dirimu, dengan segala luka dan impian. Biarkan dirimu 
+              merasakan rasa sakit itu, tetapi jangan biarkan itu mendefinisikan siapa kamu. 
+              Kamu adalah cukup, persis seperti dirimu sekarang. Kebangkitan akan datang! dan 
+              dengan itu, keindahan dari penerimaan dan cinta untuk diri sendiri.
+
+              Kamu adalah harapan bukan kegagalan, kamu cukup dengan apa yang kamu miliki.
+
+              Semoga sedikit perjalan hidup ku dapat menginspirasi teman-teman yang membaca><
+            </span>
+              </p>
+
+            <div class="italic my-[20px] p-[10px] text-right text-[#D2691E]">              Rosintan Sitinjak <br>
+              Based on my life story
+          </div>
+          </p>
+        </div>
+      </section>
+
+      <section class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white/70 backdrop-blur-md rounded-xl p-6 transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2.5">
+          <h3 class="text-2xl mb-4 bg-gradient-to-tr from-[#6a11cb] to-[#2575fc] bg-clip-text text-transparent">
+            Inspirational Audio "Sleeping At Last"
+          </h3>
+          <audio controls class="w-full">
+            <source src="Sleeping At Last - You Are Enough (Official Music Video).mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="bg-white/70 backdrop-blur-md rounded-xl p-6 transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2.5">
+          <h3 class="text-2xl mb-4 class="bg-gradient-to-tr from-[#6a11cb] to-[#2575fc] bg-clip-text text-transparent"">
+            Reflective Quotes
+          </h3>
+          <blockquote class="italic text-gray-600">
+            "In the midst of winter, I found there was, within me, an invincible summer."
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="bg-gray-100 text-black py-5 mt-6">
+      <div class="footer-content grid grid-cols-1 gap-5 justify-items-center">
+        <div class="move-back">
+          <a href="#" class="text-sm font-medium hover:underline"
+            >Kembali ke atas ^</a
+          >
+        </div>
+
+        <div class="kami">
+          <p class="text-lg font-semibold">HUBUNGI KAMI</p>
+        </div>
+
+        <div class="move-back2">
+          <a href="#" class="text-sm font-medium hover:underline"
+            >Daftar Test Drive</a
+          >
+        </div>
+
+        <div class="footer-links grid grid-cols-3 gap-3">
+          <a
+            href="https://fti.unai.edu/"
+            class="text-base font-medium hover:text-green-600"
+            >FTI UNAI</a
+          >
+          <a
+            href="https://unai.edu/"
+            class="text-base font-medium hover:text-green-600"
+            >UNAI Website</a
+          >
+          <!-- <a
+            href="https://jurnal.unai.edu/index.php/teika"
+            class="text-base font-medium hover:text-green-600"
+            >Jurnal Teika</a
+          > -->
+        </div>
+
+        <div class="flex items-center py-4 px-8 lg:px-16">
+          <div class="flex-1 flex items-center">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium mr-11">Indonesia</h3>
+          </div>
+          <div class="flex items-center">
+            <span class="text-gray-500">Indonesia</span>
+            <span class="mx-2">|</span>
+            <span class="text-gray-500">Indonesia</span>
+            <span class="mx-2">|</span>
+            <span class="text-semibold"><strong>English</strong></span>
+          </div>
+        </div>
+
+        <div class="social-media grid grid-cols-4 gap-4">
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
+            ><i class="fab fa-threads"></i
+          ></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+
+        <div class="text-over-icon grid grid-cols-3 gap-5">
+          <p class="text-xs text-gray-500">Legal</p>
+          <p class="text-xs text-gray-500">Privacy</p>
+          <p class="text-xs text-gray-500">Social Media</p>
+        </div>
+
+        <p class="copyright text-xs text-gray-400 mt-5">
+          Copyright &copy; 2024 Volvo Car Corporation (atau afiliasi dan/atau
+          pemberi lisensinya)
+        </p>
+      </div>
+    </footer>
+    </body>
+</html>
