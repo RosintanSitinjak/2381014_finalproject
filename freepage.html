@@ -7,11 +7,12 @@
         <title>Inspirational Journey</title>
         <link rel="icon" type="image/x-icon" href="all_images/favicon2.jpg">
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
         <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
       tailwind.config = {
           theme: {
@@ -22,6 +23,8 @@
               }
           }
       }
+
+      
       </script>
     </head>
 
@@ -295,55 +298,42 @@ document.addEventListener("DOMContentLoaded", function () {
     <footer class="bg-gray-100 text-black py-5 mt-6">
       <div class="footer-content grid grid-cols-1 gap-5 justify-items-center">
         <div class="move-back">
-          <a href="#" class="text-sm font-medium hover:underline"
-            >Kembali ke atas ^</a
-          >
+          <a href="#" class="text-sm font-medium hover:underline">Kembali ke atas ^</a>
         </div>
-
+    
         <div class="kami">
           <p class="text-lg font-semibold">HUBUNGI KAMI</p>
         </div>
-
+    
         <div class="move-back2">
-          <a href="#" class="text-sm font-medium hover:underline"
-            >Daftar Test Drive</a
-          >
+          <a href="#" class="text-sm font-medium hover:underline">Daftar Test Drive</a>
         </div>
-
-        <div class="footer-links grid grid-cols-3 gap-3">
-          <a
-            href="https://fti.unai.edu/"
-            class="text-base font-medium hover:text-green-600"
-            >FTI UNAI</a
-          >
-          <a
-            href="https://unai.edu/"
-            class="text-base font-medium hover:text-green-600"
-            >UNAI Website</a
-          >
-          <!-- <a
-            href="https://jurnal.unai.edu/index.php/teika"
-            class="text-base font-medium hover:text-green-600"
-            >Jurnal Teika</a
-          > -->
-        </div>
-
+    
+        <div class="footer-links flex flex-col sm:flex-row items-center gap-4">
+            <div class="flex items-center">
+              <a
+                href="https://fti.unai.edu/"
+                target="_blank"
+                class="text-base font-medium text-baby-blue-600 hover:text-blue-800 flex items-center"
+              >
+                FTI UNAI
+              </a>
+              <span class="mx-3 text-gray-400">|</span>
+              <a
+                href="https://unai.edu/"
+                target="_blank"
+                class="text-base font-medium text-baby-blue-600 hover:text-blue-800 flex items-center"
+              >
+                UNAI Website
+              </a>
+            </div>
+          </div>
+    
         <div class="flex items-center py-4 px-8 lg:px-16">
           <div class="flex-1 flex items-center">
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <h3 class="text-lg font-medium mr-11">Indonesia</h3>
@@ -356,33 +346,24 @@ document.addEventListener("DOMContentLoaded", function () {
             <span class="text-semibold"><strong>English</strong></span>
           </div>
         </div>
-
+    
         <div class="social-media grid grid-cols-4 gap-4">
-          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
-            ><i class="fab fa-threads"></i
-          ></a>
-          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
-            ><i class="fab fa-youtube"></i
-          ></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"><i class="fab fa-threads"></i></a>
+          <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"><i class="fab fa-youtube"></i></a>
         </div>
-
+    
         <div class="text-over-icon grid grid-cols-3 gap-5">
           <p class="text-xs text-gray-500">Legal</p>
           <p class="text-xs text-gray-500">Privacy</p>
           <p class="text-xs text-gray-500">Social Media</p>
         </div>
-
+    
         <p class="copyright text-xs text-gray-400 mt-5">
-          Copyright &copy; 2024 Volvo Car Corporation (atau afiliasi dan/atau
-          pemberi lisensinya)
+          Copyright &copy; 2024 Volvo Car Corporation (atau afiliasi dan/atau pemberi lisensinya)
         </p>
       </div>
     </footer>
-    </body>
+        </body>
 </html>

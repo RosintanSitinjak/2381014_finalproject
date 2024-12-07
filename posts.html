@@ -8,13 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
   </head>
 
-  <body class="bg-green-100 min-h-screen flex flex-col">
-    <!-- 1. header -->
-
+  <body class="bg-baby-blue-50 min-h-screen flex flex-col pt-16">
     <!-- 1. header -->
     <header
       class="fixed top-0 left-0 right-0 flex justify-between items-center px-4 md:px-8 bg-white py-4 h-16 z-50"
@@ -167,18 +165,17 @@
     </script>
 
     <!-- the content -->
-    <main
-      class="flex-grow container mx-auto p-6 flex justify-center items-center"
-    >
-      <div class="w-full flex flex-col items-center">
-        <h1 class="text-3xl font-semibold text-center mb-6 text-gray-800">
-          Posts From API
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <div class="max-w-2xl mx-auto">
+        <h1
+          class="text-3xl font-bold text-center text-baby-blue-800 mb-8 hover:text-baby-blue-900 transition duration-300"
+        >
+          Posts from API
         </h1>
 
-        <div
-          id="posts-container"
-          class="grid grid-cols-1 place-items-center w-full justify-center items-center"
-        ></div>
+        <div id="posts-container" class="space-y-6">
+          <!-- Posts will be dynamically loaded here -->
+        </div>
       </div>
     </main>
 
@@ -192,22 +189,22 @@
         postCard.classList.add(
           "bg-white",
           "rounded-lg",
-          "shadow-lg",
+          "shadow-md",
           "p-6",
-          "w-full",
-          "max-w-sm",
-          "transition-transform",
-          "hover:scale-105",
-          "flex",
-          "flex-col",
-          "items-center"
+          "border",
+          "border-baby-blue-200",
+          "hover:shadow-lg",
+          "transition",
+          "duration-300",
+          "ease-in-out"
         );
 
         postCard.innerHTML = `
-      <p class="w-full"><span class="font-bold text-lg block text-left">Post ID:</span> ${data.id}</p>
-      <p class="w-full"><span class="font-bold text-lg block text-left">Title:</span> ${data.title}</p>
-      <p class="w-full"><span class="font-bold text-lg block text-left">Body:</span> ${data.body}</p>
-      `;
+              <h2 class="text-xl font-bold text-baby-blue-700 mb-3">Post Details</h2>
+              <p class="mb-2 text-gray-700"><strong class="text-baby-blue-800">ID:</strong> ${data.id}</p>
+              <p class="mb-2 text-gray-700"><strong class="text-baby-blue-800">Title:</strong> ${data.title}</p>
+              <p class="text-gray-700"><strong class="text-baby-blue-800">Content:</strong> ${data.body}</p>
+          `;
 
         postContainer.appendChild(postCard);
       }
@@ -218,9 +215,17 @@
           displayPosts(data);
         })
         .catch((error) => {
-          console.error("There is an Error: ", error);
+          console.error("Error fetching post:", error);
+          const postContainer = document.getElementById("posts-container");
+          postContainer.innerHTML = `
+                  <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                      <strong class="font-bold">Error!</strong>
+                      <span class="block sm:inline">Unable to fetch posts. Please try again later.</span>
+                  </div>
+              `;
         });
     </script>
+
     <footer class="bg-gray-100 text-black py-5 mt-6">
       <div class="footer-content flex flex-col items-center space-y-5">
         <div class="move-back">
@@ -239,17 +244,24 @@
           >
         </div>
 
-        <div class="footer-links flex flex-col sm:flex-row gap-3">
-          <a
-            href="https://fti.unai.edu/"
-            class="text-base font-medium hover:text-green-600"
-            >FTI UNAI</a
-          >
-          <a
-            href="https://unai.edu/"
-            class="text-base font-medium hover:text-green-600"
-            >UNAI Website</a
-          >
+        <div class="footer-links flex flex-col sm:flex-row items-center gap-4">
+          <div class="flex items-center">
+            <a
+              href="https://fti.unai.edu/"
+              target="_blank"
+              class="text-base font-medium text-baby-blue-600 hover:text-blue-800 flex items-center"
+            >
+              FTI UNAI
+            </a>
+            <span class="mx-3 text-gray-400">|</span>
+            <a
+              href="https://unai.edu/"
+              target="_blank"
+              class="text-base font-medium text-baby-blue-600 hover:text-blue-800 flex items-center"
+            >
+              UNAI Website
+            </a>
+          </div>
         </div>
 
         <div class="flex flex-col sm:flex-row items-center py-4 px-8 lg:px-16">
