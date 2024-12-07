@@ -12,7 +12,7 @@
     />
   </head>
 
-  <body class="bg-green-100 min-h-screen flex items-center justify-center">
+  <body class="bg-green-100 min-h-screen flex flex-col">
     <!-- 1. header -->
 
     <!-- 1. header -->
@@ -167,8 +167,8 @@
     </script>
 
     <!-- the content -->
-    <div
-      class="container mx-auto p-6 flex justify-center items-center min-h-screen"
+    <main
+      class="flex-grow container mx-auto p-6 flex justify-center items-center"
     >
       <div class="w-full flex flex-col items-center">
         <h1 class="text-3xl font-semibold text-center mb-6 text-gray-800">
@@ -180,7 +180,7 @@
           class="grid grid-cols-1 place-items-center w-full justify-center items-center"
         ></div>
       </div>
-    </div>
+    </main>
 
     <script>
       const apiUrl = `https://jsonplaceholder.typicode.com/posts/14`;
@@ -221,9 +221,8 @@
           console.error("There is an Error: ", error);
         });
     </script>
-
     <footer class="bg-gray-100 text-black py-5 mt-6">
-      <div class="footer-content grid grid-cols-1 gap-5 justify-items-center">
+      <div class="footer-content flex flex-col items-center space-y-5">
         <div class="move-back">
           <a href="#" class="text-sm font-medium hover:underline"
             >Kembali ke atas ^</a
@@ -240,7 +239,7 @@
           >
         </div>
 
-        <div class="footer-links grid grid-cols-3 gap-3">
+        <div class="footer-links flex flex-col sm:flex-row gap-3">
           <a
             href="https://fti.unai.edu/"
             class="text-base font-medium hover:text-green-600"
@@ -251,32 +250,25 @@
             class="text-base font-medium hover:text-green-600"
             >UNAI Website</a
           >
-          <!-- <a
-        href="https://jurnal.unai.edu/index.php/teika"
-        class="text-base font-medium hover:text-green-600"
-        >Jurnal Teika</a
-      > -->
         </div>
 
-        <div class="flex items-center py-4 px-8 lg:px-16">
-          <div class="flex-1 flex items-center">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium mr-11">Indonesia</h3>
+        <div class="flex flex-col sm:flex-row items-center py-4 px-8 lg:px-16">
+          <div class="flex items-center mb-2 sm:mb-0 sm:mr-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <h3 class="text-lg font-medium ml-2">Indonesia</h3>
           </div>
           <div class="flex items-center">
             <span class="text-gray-500">Indonesia</span>
@@ -287,7 +279,7 @@
           </div>
         </div>
 
-        <div class="social-media grid grid-cols-4 gap-4">
+        <div class="social-media flex gap-4">
           <a href="#" class="text-2xl p-3 rounded-full hover:bg-gray-300"
             ><i class="fab fa-facebook"></i
           ></a>
@@ -302,13 +294,13 @@
           ></a>
         </div>
 
-        <div class="text-over-icon grid grid-cols-3 gap-5">
+        <div class="text-over-icon flex gap-5">
           <p class="text-xs text-gray-500">Legal</p>
           <p class="text-xs text-gray-500">Privacy</p>
           <p class="text-xs text-gray-500">Social Media</p>
         </div>
 
-        <p class="copyright text-xs text-gray-400 mt-5">
+        <p class="copyright text-xs text-gray-400 text-center">
           Copyright &copy; 2024 Volvo Car Corporation (atau afiliasi dan/atau
           pemberi lisensinya)
         </p>
