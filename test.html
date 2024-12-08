@@ -3,172 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volvo Posts</title>
+    <title>Contact Us</title>
     <link rel="icon" type="image/x-icon" href="all_images/favicon2.jpg" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "baby-blue": {
-                DEFAULT: "#E6F2FF",
-                50: "#F5FAFF",
-                100: "#E6F2FF",
-                200: "#BCDEFF",
-                300: "#84C5FF",
-                400: "#4AACFF",
-                500: "#1193FF",
-                600: "#0078D7",
-                700: "#005BA3",
-                800: "#004080",
-                900: "#00264D",
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-baby-blue-50 min-h-screen flex flex-col">
+  <body>
     <!-- Header -->
-    <header class="bg-white shadow-md">
-      <div
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <div class="text-2xl font-bold text-baby-blue-700">VOLVO</div>
-
-        <!-- Navigation -->
-        <nav class="hidden md:block">
-          <ul class="flex space-x-6">
-            <li>
-              <a
-                href="index.html"
-                class="text-gray-700 hover:text-baby-blue-600 transition duration-300 ease-in-out"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="biodata.html"
-                class="text-gray-700 hover:text-baby-blue-600 transition duration-300 ease-in-out"
-                >Biodata</a
-              >
-            </li>
-            <li>
-              <a
-                href="contact_us.html"
-                class="text-gray-700 hover:text-baby-blue-600 transition duration-300 ease-in-out"
-                >Contact</a
-              >
-            </li>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">VOLVO</a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="freepage.html">Free Content</a></li>
           </ul>
         </nav>
-
-        <!-- Mobile Menu Toggle -->
-        <button
-          class="md:hidden text-baby-blue-700 hover:text-baby-blue-900 transition duration-300"
-        >
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
+        <div class="header-right">
+          <i class="fas fa-search"></i>
+          <a href="#">Masuk</a>
+        </div>
       </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8">
-      <div class="max-w-2xl mx-auto">
-        <h1
-          class="text-3xl font-bold text-center text-baby-blue-800 mb-8 hover:text-baby-blue-900 transition duration-300"
-        >
-          Posts from API
-        </h1>
-
-        <div id="posts-container" class="space-y-6">
-          <!-- Posts will be dynamically loaded here -->
-        </div>
-      </div>
+    <main>
+      <section class="contact-us">
+        <h1>Contact Us</h1>
+        <p>
+          If you have any questions, feel free to reach out using the form
+          below.
+        </p>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-6 mt-8 shadow-md">
-      <div class="container mx-auto px-4 text-center">
-        <div class="flex justify-center space-x-4 mb-4">
-          <a
-            href="#"
-            class="text-baby-blue-600 hover:text-baby-blue-800 transition duration-300 transform hover:scale-110"
-          >
-            <i class="fab fa-facebook text-2xl"></i>
-          </a>
-          <a
-            href="#"
-            class="text-baby-blue-600 hover:text-baby-blue-800 transition duration-300 transform hover:scale-110"
-          >
-            <i class="fab fa-instagram text-2xl"></i>
-          </a>
-          <a
-            href="#"
-            class="text-baby-blue-600 hover:text-baby-blue-800 transition duration-300 transform hover:scale-110"
-          >
-            <i class="fab fa-linkedin text-2xl"></i>
-          </a>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
         </div>
-        <p
-          class="text-sm text-gray-600 hover:text-baby-blue-700 transition duration-300"
-        >
-          &copy; 2024 Volvo. All Rights Reserved.
-        </p>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>123 Volvo Street</p>
+          <p>City, Country</p>
+          <p>+123 456 7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 VOLVO. All rights reserved.</p>
       </div>
     </footer>
-
-    <script>
-      const apiUrl = `https://jsonplaceholder.typicode.com/posts/14`;
-
-      function displayPosts(data) {
-        const postContainer = document.getElementById("posts-container");
-
-        const postCard = document.createElement("div");
-        postCard.classList.add(
-          "bg-white",
-          "rounded-lg",
-          "shadow-md",
-          "p-6",
-          "border",
-          "border-baby-blue-200",
-          "hover:shadow-lg",
-          "transition",
-          "duration-300",
-          "ease-in-out"
-        );
-
-        postCard.innerHTML = `
-                <h2 class="text-xl font-bold text-baby-blue-700 mb-3">Post Details</h2>
-                <p class="mb-2 text-gray-700"><strong class="text-baby-blue-800">ID:</strong> ${data.id}</p>
-                <p class="mb-2 text-gray-700"><strong class="text-baby-blue-800">Title:</strong> ${data.title}</p>
-                <p class="text-gray-700"><strong class="text-baby-blue-800">Content:</strong> ${data.body}</p>
-            `;
-
-        postContainer.appendChild(postCard);
-      }
-
-      fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          displayPosts(data);
-        })
-        .catch((error) => {
-          console.error("Error fetching post:", error);
-          const postContainer = document.getElementById("posts-container");
-          postContainer.innerHTML = `
-                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                        <strong class="font-bold">Error!</strong>
-                        <span class="block sm:inline">Unable to fetch posts. Please try again later.</span>
-                    </div>
-                `;
-        });
-    </script>
   </body>
 </html>
